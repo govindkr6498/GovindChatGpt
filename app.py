@@ -6,7 +6,9 @@ from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from fastapi.middleware.cors import CORSMiddleware
 from PyPDF2 import PdfReader
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 app = FastAPI()
 
 # Add CORS middleware
@@ -21,8 +23,6 @@ app.add_middleware(
 # Set OpenAI API Key
 # os.environ["OPENAI_API_KEY"] = "your_openai_api_key_here"  # Replace with your actual API key
 
-os.environ["OPENAI_API_KEY"] = "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"
-print(os.getenv("OPENAI_API_KEY"))
 
 # Load PDF and create vector store
 def get_vectorstore_from_static_pdf(pdf_path="C:/Users/lenovo/Downloads/ApexDeveloperGuidea.pdf"):

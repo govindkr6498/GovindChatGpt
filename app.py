@@ -23,6 +23,8 @@ app.add_middleware(
 # Set OpenAI API Key
 # os.environ["OPENAI_API_KEY"] = "your_openai_api_key_here"  # Replace with your actual API key
 
+os.environ["OPENAI_API_KEY"] = "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"
+print(os.getenv("OPENAI_API_KEY"))
 
 # Load PDF and create vector store
 def get_vectorstore_from_static_pdf(pdf_path="C:/Users/lenovo/Downloads/ApexDeveloperGuidea.pdf"):

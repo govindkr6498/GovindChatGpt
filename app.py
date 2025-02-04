@@ -28,8 +28,8 @@ app.add_middleware(
 )
 
 # Hardcoded PDF path
-PDF_PATH = "C:/Users/lenovo/Downloads/ApexDeveloperGuidea.pdf"
-
+# PDF_PATH = "C:/Users/lenovo/Downloads/ApexDeveloperGuidea.pdf"
+PDF_PATH = "/home/ubuntu/ApexDeveloperGuidea.pdf"
 # Function to Load PDF and Create Vector Store
 def get_vectorstore_from_static_pdf(pdf_path=PDF_PATH):
     try:
